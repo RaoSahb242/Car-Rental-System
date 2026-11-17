@@ -1,15 +1,15 @@
+wwwroot\admin.html
 wwwroot\css\style.css
+wwwroot\customer.html
 wwwroot\images\car1.jpg
 wwwroot\images\car2.jpg
 wwwroot\images\car3.jpg
 wwwroot\index.html
 wwwroot\login.html
 wwwroot\signup.html
-wwwroot\admin.html
-wwwroot\customer.html
+C:\Users\User\source\repos\Car Rental System\wwwroot\admin.html
 C:\Users\User\source\repos\Car Rental System\wwwroot\css\style.css
+C:\Users\User\source\repos\Car Rental System\wwwroot\customer.html
 C:\Users\User\source\repos\Car Rental System\wwwroot\index.html
 C:\Users\User\source\repos\Car Rental System\wwwroot\login.html
 C:\Users\User\source\repos\Car Rental System\wwwroot\signup.html
-C:\Users\User\source\repos\Car Rental System\wwwroot\admin.html
-C:\Users\User\source\repos\Car Rental System\wwwroot\customer.html

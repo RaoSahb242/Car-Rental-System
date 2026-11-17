@@ -27,8 +27,6 @@ C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\refint\Car Rental 
 C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\Car Rental System.pdb
 C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\Car Rental System.genruntimeconfig.cache
 C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\ref\Car Rental System.dll
-C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\jdyaf6bsjh-0qagakj6j6.gz
-C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\ejksxlyrmq-anl4xwi3kp.gz
 C:\Users\User\source\repos\Car Rental System\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\User\source\repos\Car Rental System\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\User\source\repos\Car Rental System\bin\Debug\net9.0\Humanizer.dll
@@ -217,7 +215,12 @@ C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\nezrqnk
 C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
 C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\Car Rent.B72BD1CD.Up2Date
-C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\p3hpscw62h-jys3h21jxx.gz
-C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\ax8mo9ddrl-gphug4irhk.gz
-C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\x91b9ut4lf-twgwqcqo5k.gz
-C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\yn537iwubn-tr31qbd6m0.gz
+C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\Car Rental System.sourcelink.json
+C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\x91b9ut4lf-0f2bj6szzs.gz
+C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\yn537iwubn-coxll9tt6s.gz
+C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\ax8mo9ddrl-4ecj6xdutf.gz
+C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\ejksxlyrmq-u2iwf0rdlo.gz
+C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\p3hpscw62h-ikw62chgit.gz
+C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\Car Rental System.RazorAssemblyInfo.cache
+C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\Car Rental System.RazorAssemblyInfo.cs
+C:\Users\User\source\repos\Car Rental System\obj\Debug\net9.0\compressed\jdyaf6bsjh-32046649uw.gz

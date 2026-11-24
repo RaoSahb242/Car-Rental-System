@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Our Cars";
+}
+
+<div class="container py-5">
+
+    <h2 class="text-center mb-4">Our Available Cars</h2>
+
+    <div id="loading" class="text-center">
+        Loading cars...
+    </div>
+
+    <div id="carsContainer" class="row g-4"></div>
+
+    <div id="noCars" class="text-center text-muted"
+         style="display:none;">
+        No cars available currently.
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        async function loadCars() {
+
+            const loading = document.getElementById("loading");
+            const container = document.getElementById("carsContainer");
+            const noCars = document.getElementById("noCars");
+
+            try {
+
+                const response = await fetch('/Cars/GetCars');
+
+                if (!response.ok) {
+                    throw new Error("Unable to load cars.");
+                }
+
+                const cars = await response.json();
+
+                loading.style.display = "none";
+
+                if (cars.length === 0) {
+                    noCars.style.display = "block";
+                    return;
+                }
+
+                cars.forEach(car => {
+
+                    container.innerHTML += `
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+
+                                <img src="${car.imageUrl || '/images/car-placeholder.png'}"
+                                     class="card-img-top"
+                                     style="height:220px; object-fit:cover;"
+                                     alt="${car.carName}">
+
+                                <div class="card-body">
+
+                                    <h5 class="card-title">
+                                        ${car.carName}
+                                    </h5>
+
+                                    <p class="card-text">
+                                        Brand: ${car.brand}<br>
+                                        Model: ${car.model}<br>
+                                        Year: ${car.year}<br>
+                                        Price Per Day: ${car.pricePerDay}
+                                    </p>
+
+                                    <span class="badge bg-success">
+                                        ${car.isAvailable ? 'Available' : 'Not Available'}
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+            }
+            catch (error) {
+
+                loading.innerText = error.message;
+
+            }
+        }
+
+        loadCars();
+    </script>
+}

@@ -1,0 +1,23 @@
+﻿namespace Car_Rental_System.Models
+{
+    public class Car
+    {
+        public int Id { get; set; }
+
+        public string CarName { get; set; } = string.Empty;
+
+        public string Brand { get; set; } = string.Empty;
+
+        public string Model { get; set; } = string.Empty;
+
+        public int Year { get; set; }
+
+        public decimal PricePerDay { get; set; }
+
+        public string ImageUrl { get; set; } = string.Empty;
+
+        public string Description { get; set; } = string.Empty;
+
+        public bool IsAvailable { get; set; } = true;
+    }
+}

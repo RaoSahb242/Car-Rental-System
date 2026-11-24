@@ -4,10 +4,8 @@
 
 namespace Car_Rental_System.Migrations
 {
-    /// <inheritdoc />
     public partial class AddFullNameToApplicationUser : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
@@ -17,8 +15,6 @@ namespace Car_Rental_System.Migrations
                 nullable: false,
                 defaultValue: "");
         }
-
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(

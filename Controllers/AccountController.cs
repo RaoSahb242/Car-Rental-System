@@ -13,7 +13,6 @@ namespace Car_Rental_System.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
-
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
@@ -26,14 +25,12 @@ namespace Car_Rental_System.Controllers
             _configuration = configuration;
         }
 
-        // GET: Login
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
-        // POST: Login
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(
@@ -77,14 +74,12 @@ namespace Car_Rental_System.Controllers
             return View();
         }
 
-        // GET: Customer Registration
         [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
 
-        // POST: Customer Registration
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(
@@ -148,14 +143,12 @@ namespace Car_Rental_System.Controllers
             return View();
         }
 
-        // GET: Admin Registration
         [HttpGet]
         public IActionResult AdminRegister()
         {
             return View();
         }
 
-        // POST: Admin Registration
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AdminRegister(

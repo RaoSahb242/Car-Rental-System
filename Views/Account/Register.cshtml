@@ -2,16 +2,7 @@
     ViewData["Title"] = "Sign Up";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sign Up - Car Rental System</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+@section Styles {
     <style>
         body {
             background-color: #f5f5f5;
@@ -30,10 +21,6 @@
                 margin-bottom: 10px;
             }
 
-        .navbar {
-            background-color: #198754 !important;
-        }
-
         .btn-primary {
             background-color: #198754;
             border-color: #198754;
@@ -44,100 +31,80 @@
                 border-color: #146c43;
             }
     </style>
-</head>
+}
 
-<body>
+<div class="container">
 
-    <nav class="navbar navbar-dark">
-        <div class="container">
+    <div class="signup-box">
 
-            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-                Car Rental System
-            </a>
+        <h2 class="text-center">Sign Up</h2>
 
-            <a asp-controller="Home" asp-action="Index"
-               class="text-white text-decoration-none">
-                Home
-            </a>
+        <p class="text-center text-muted mb-4">
+            Create your account
+        </p>
 
-        </div>
-    </nav>
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger">
+                @ViewBag.Error
+            </div>
+        }
 
-    <div class="container">
+        <form asp-controller="Account" asp-action="Register" method="post">
 
-        <div class="signup-box">
+            @Html.AntiForgeryToken()
 
-            <h2 class="text-center">Sign Up</h2>
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
 
-            <p class="text-center text-muted mb-4">
-                Create your account
-            </p>
+                <input type="text" name="FullName" class="form-control"
+                       placeholder="Enter your full name" required>
+            </div>
 
-            @if (ViewBag.Error != null)
-            {
-                <div class="alert alert-danger">
-                    @ViewBag.Error
-                </div>
-            }
+            <div class="mb-3">
+                <label class="form-label">Email Address</label>
 
-            <form asp-controller="Account" asp-action="Register" method="post">
+                <input type="email" name="Email" class="form-control"
+                       placeholder="Enter your email" required>
+            </div>
 
-                @Html.AntiForgeryToken()
+            <div class="mb-3">
+                <label class="form-label">Phone Number</label>
 
-                <div class="mb-3">
-                    <label class="form-label">Full Name</label>
+                <input type="tel" name="PhoneNumber" class="form-control"
+                       placeholder="Enter your phone number" required>
+            </div>
 
-                    <input type="text" name="FullName" class="form-control"
-                           placeholder="Enter your full name" required>
-                </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
 
-                <div class="mb-3">
-                    <label class="form-label">Email Address</label>
+                <input type="password" name="Password" class="form-control"
+                       placeholder="Create password" required>
+            </div>
 
-                    <input type="email" name="Email" class="form-control"
-                           placeholder="Enter your email" required>
-                </div>
+            <div class="mb-3">
+                <label class="form-label">Confirm Password</label>
 
-                <div class="mb-3">
-                    <label class="form-label">Phone Number</label>
+                <input type="password" name="ConfirmPassword" class="form-control"
+                       placeholder="Confirm password" required>
+            </div>
 
-                    <input type="tel" name="PhoneNumber" class="form-control"
-                           placeholder="Enter your phone number" required>
-                </div>
+            <div class="mb-3">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the Terms and Conditions.</label>
+            </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
+            <button type="submit" class="btn btn-primary w-100">
+                Create Account
+            </button>
 
-                    <input type="password" name="Password" class="form-control"
-                           placeholder="Create password" required>
-                </div>
+        </form>
 
-                <div class="mb-3">
-                    <label class="form-label">Confirm Password</label>
-
-                    <input type="password" name="ConfirmPassword" class="form-control"
-                           placeholder="Confirm password" required>
-                </div>
-
-                <div class="mb-3">
-                    <input type="checkbox" id="terms" required>
-                    <label for="terms">I agree to the Terms and Conditions.</label>
-                </div>
-
-                <button type="submit" class="btn btn-primary w-100">
-                    Create Account
-                </button>
-
-            </form>
-
-            <p class="text-center mt-4 mb-0">
-                Already have an account?
-                <a asp-controller="Account" asp-action="Login">Login</a>
-            </p>
-
-        </div>
+        <p class="text-center mt-4 mb-0">
+            Already have an account?
+            <a asp-controller="Account" asp-action="Login">Login</a>
+        </p>
 
     </div>
 
-</body>
-</html>
+</div>
